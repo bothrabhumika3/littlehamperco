@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { siteConfig, getWhatsAppLink } from '../../config/siteConfig';
-import { Phone, MessageCircle, Mail, MapPin, Sparkles, ShieldCheck } from 'lucide-react';
+import { Phone, MessageCircle, Mail, MapPin, Sparkles, ShieldCheck, Clock, Truck } from 'lucide-react';
 import { InstagramIcon } from './InstagramIcon';
 import { BrandLogo } from './BrandLogo';
 
@@ -28,18 +28,18 @@ export const Footer: React.FC = () => {
               <ShieldCheck className="w-6 h-6" />
             </div>
             <div>
-              <h3 className="font-serif text-lg font-semibold text-white">Finest Quality Treats</h3>
-              <p className="text-xs text-stone-400">A-grade produce, craft confection &amp; luxury packing</p>
+              <h3 className="font-serif text-lg font-semibold text-white">Guaranteed Quality</h3>
+              <p className="text-xs text-stone-400">No returns; replacement only for damaged items</p>
             </div>
           </div>
 
           <div className="flex items-center justify-center md:justify-start gap-4">
             <div className="w-12 h-12 rounded-2xl bg-charcoal-800 border border-charcoal-700 flex items-center justify-center text-brand-400">
-              <MessageCircle className="w-6 h-6" />
+              <Truck className="w-6 h-6" />
             </div>
             <div>
-              <h3 className="font-serif text-lg font-semibold text-white">Direct WhatsApp Care</h3>
-              <p className="text-xs text-stone-400">Instant assistance from our curation specialists</p>
+              <h3 className="font-serif text-lg font-semibold text-white">Express Delivery</h3>
+              <p className="text-xs text-stone-400">Delivery time: 2–3 days (Time slots available)</p>
             </div>
           </div>
         </div>
@@ -55,7 +55,7 @@ export const Footer: React.FC = () => {
               Customized Gift Hampers, Corporate Gifting, Food Platters, Bouquets &amp; Wedding Packing.
             </p>
             <p className="text-xs text-gold-300 italic font-serif">
-              ~ Curated by Priya Jain, Bangalore
+              ~ Curated by Priya Bothra, Bangalore
             </p>
             <div className="text-xs text-stone-400 space-y-1.5 pt-1">
               <p className="flex items-start gap-1.5">
@@ -64,7 +64,11 @@ export const Footer: React.FC = () => {
               </p>
               <p className="flex items-center gap-1.5">
                 <Phone className="w-3.5 h-3.5 text-gold-400 shrink-0" />
-                <span>{siteConfig.phone} / {siteConfig.secondaryPhone}</span>
+                <span>Contact: {siteConfig.phone}</span>
+              </p>
+              <p className="flex items-start gap-1.5 text-[11px] text-stone-400">
+                <Clock className="w-3.5 h-3.5 text-gold-400 shrink-0 mt-0.5" />
+                <span>Order time: 10 AM – 9 PM (Sun: 10 AM – 6 PM)</span>
               </p>
             </div>
           </div>
@@ -184,7 +188,7 @@ export const Footer: React.FC = () => {
           <div className="col-span-2 sm:col-span-1">
             <h4 className="text-xs font-bold uppercase tracking-widest text-gold-400 mb-4">Connect With Us</h4>
             <p className="text-xs text-stone-400 mb-3">
-              Have a question or custom vision? We're available 7 days a week.
+              Order time: 10 AM – 9 PM (Sun: 10 AM – 6 PM) &bull; Contact: {siteConfig.phone}
             </p>
             <div className="space-y-2 mb-4">
               <a

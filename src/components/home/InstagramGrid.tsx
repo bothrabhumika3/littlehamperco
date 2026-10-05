@@ -5,7 +5,7 @@ import { BrandLogo } from '../common/BrandLogo';
 import { siteConfig } from '../../config/siteConfig';
 
 export const InstagramGrid: React.FC = () => {
-  // Story highlights directly matching Priya Jain's actual Instagram account
+  // Story highlights directly matching Priya Bothra's actual Instagram account
   const storyHighlights = [
     { title: 'Rakhi 2026', emoji: '🪡', color: 'from-amber-100 to-rose-100' },
     { title: 'reviews 💖', emoji: '⭐', color: 'from-rose-100 to-pink-100' },
@@ -105,7 +105,7 @@ export const InstagramGrid: React.FC = () => {
                   {siteConfig.brandName} &bull; Gift Hamper Bangalore
                 </p>
                 <p className="text-stone-500 text-[11px] font-serif italic">
-                  ~ By Priya Jain
+                  ~ By Priya Bothra
                 </p>
                 <p className="text-[11px] text-stone-500 mt-1">
                   Customized Gift Hampers 🎉 Corporate Gifting 🏢 Fresh Food Platters 🍱 Bouquets 💐 Wedding Packing 💍

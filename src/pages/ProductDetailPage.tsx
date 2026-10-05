@@ -212,23 +212,28 @@ export const ProductDetailPage: React.FC = () => {
               />
             </div>
 
-            {/* Delivery & Cutoff Information */}
-            <div className="space-y-2 text-xs text-stone-600 pt-3 border-t border-cream-100">
+            {/* Delivery & Ordering Information */}
+            <div className="space-y-2.5 text-xs text-stone-600 pt-3 border-t border-cream-100">
               <div className="flex items-center gap-2">
-                <Truck className="w-4 h-4 text-brand-500" />
+                <Truck className="w-4 h-4 text-brand-500 shrink-0" />
                 <span>
-                  <strong>Safe Pan-India Dispatch:</strong> Express delivery from our Bangalore studio
+                  <strong>Delivery time: 2–3 days</strong> &bull; Delivery time slot: Available
                 </span>
               </div>
-              {product.sameDayDelivery && (
-                <div className="flex items-center gap-2 text-emerald-700 font-medium">
-                  <Clock className="w-4 h-4 text-emerald-600" />
-                  <span>
-                    Same-Day Delivery available for orders placed before{' '}
-                    <strong>{siteConfig.sameDayDeliveryCutoff}</strong>
-                  </span>
-                </div>
-              )}
+              <div className="flex items-center gap-2">
+                <Clock className="w-4 h-4 text-amber-600 shrink-0" />
+                <span>
+                  <strong>Order time: 10 AM – 9 PM</strong> (Sunday: 10 AM – 6 PM) &bull; Call: {siteConfig.phone}
+                </span>
+              </div>
+              <div className="p-2.5 bg-cream-50 rounded-xl border border-cream-200 text-[11px] text-stone-600 space-y-0.5">
+                <p>
+                  🛡️ <strong>No returns; replacement only</strong> (Damage-free guarantee with immediate replacement)
+                </p>
+                <p>
+                  🔄 <strong>Pre-order cancellation:</strong> Full refund if cancelled within 24 hours
+                </p>
+              </div>
             </div>
 
             {/* WhatsApp Enquiry & Customization CTAs */}

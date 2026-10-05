@@ -16,13 +16,13 @@ export const AboutPage: React.FC = () => {
           </div>
           <div className="inline-flex items-center gap-2 bg-brand-50 border border-brand-200 px-3.5 py-1.5 rounded-full text-brand-700 text-xs font-semibold tracking-wide">
             <Sparkles className="w-3.5 h-3.5 text-gold-500" />
-            <span>Curated by Priya Jain &bull; Bangalore</span>
+            <span>Curated by Priya Bothra &bull; Bangalore</span>
           </div>
           <h1 className="font-serif text-4xl sm:text-5xl font-bold text-charcoal-950 tracking-tight">
             The Little Hamper Co.
           </h1>
           <p className="text-base sm:text-lg text-stone-600 max-w-2xl mx-auto leading-relaxed">
-            Founded with heart by <strong>Priya Jain</strong> in Bangalore, <strong>The Little Hamper Co.</strong> was born from a simple belief: a gift should never feel generic. From custom gift hampers, corporate gifting, and artisanal food platters to fresh flower bouquets and wedding packing, every creation is thoughtfully tailored to celebrate life's most precious moments.
+            Founded with heart by <strong>Priya Bothra</strong> in Bangalore, <strong>The Little Hamper Co.</strong> was born from a simple belief: a gift should never feel generic. From custom gift hampers, corporate gifting, and artisanal food platters to fresh flower bouquets and wedding packing, every creation is thoughtfully tailored to celebrate life's most precious moments.
           </p>
         </div>
 

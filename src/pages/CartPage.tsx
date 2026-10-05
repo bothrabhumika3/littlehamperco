@@ -12,6 +12,8 @@ import {
   Package,
   ShieldCheck,
   Truck,
+  Clock,
+  RotateCcw,
 } from 'lucide-react';
 
 export const CartPage: React.FC = () => {
@@ -260,15 +262,23 @@ export const CartPage: React.FC = () => {
               <ArrowRight className="w-4 h-4" />
             </a>
 
-            {/* Trust Badges */}
-            <div className="space-y-2 pt-2 text-[11px] text-stone-500">
+            {/* Trust Badges & Customer Policies */}
+            <div className="space-y-2 pt-2 text-[11px] text-stone-600 border-t border-cream-100">
               <div className="flex items-center gap-2">
-                <ShieldCheck className="w-3.5 h-3.5 text-sage-600" />
-                <span>100% Safe and Encrypted Payment Simulation</span>
+                <Truck className="w-3.5 h-3.5 text-brand-500 shrink-0" />
+                <span><strong>Delivery time:</strong> 2–3 days (Time slots available)</span>
               </div>
               <div className="flex items-center gap-2">
-                <Truck className="w-3.5 h-3.5 text-brand-500" />
-                <span>Carefully Packed in Damage-Proof Outer Crates</span>
+                <Clock className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+                <span><strong>Order time:</strong> 10 AM – 9 PM | <strong>Sunday:</strong> 10 AM – 6 PM</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <ShieldCheck className="w-3.5 h-3.5 text-sage-600 shrink-0" />
+                <span><strong>No returns; replacement only</strong></span>
+              </div>
+              <div className="flex items-center gap-2">
+                <RotateCcw className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                <span><strong>Pre-order cancellation:</strong> Full refund if cancelled within 24h</span>
               </div>
             </div>
           </div>

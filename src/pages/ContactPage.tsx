@@ -10,6 +10,10 @@ import {
   CheckCircle2,
   ChevronDown,
   Sparkles,
+  Truck,
+  ShieldCheck,
+  RotateCcw,
+  Calendar,
 } from 'lucide-react';
 
 export const ContactPage: React.FC = () => {
@@ -36,8 +40,24 @@ export const ContactPage: React.FC = () => {
 
   const faqs = [
     {
+      q: 'What are your ordering hours and contact details?',
+      a: 'Our customer contact number is 7899140499. Order time is 10 AM – 9 PM (Monday to Saturday), and Sunday order time is 10 AM – 6 PM. You can reach us anytime during these hours via direct call or WhatsApp.',
+    },
+    {
+      q: 'What is your delivery time and are delivery time slots available?',
+      a: 'Our delivery time is 2–3 days across India. Delivery time slot is available (Morning, Afternoon, and Evening slots), which you can conveniently select during checkout.',
+    },
+    {
+      q: 'What is your return and replacement policy?',
+      a: 'We have a strict "No returns; replacement only" policy. Because all gift hampers are custom hand-packed and may contain fresh food, items cannot be returned. If any item arrives damaged or compromised during transit, please inform us within 24 hours of delivery for a prompt replacement.',
+    },
+    {
+      q: 'What is your pre-order cancellation policy?',
+      a: 'Pre-order cancellation: Full refund if cancelled within 24 hours of placing the order. After 24 hours, custom sourcing and preparation begin, so cancellations can no longer be refunded.',
+    },
+    {
       q: 'Do you deliver all across India?',
-      a: 'Yes! We deliver across 19,000+ PIN codes in India. Metro cities usually arrive within 2-3 business days, and express local deliveries are supported with same-day dispatch when ordered before 2:00 PM.',
+      a: 'Yes! We deliver across 19,000+ PIN codes in India from our Bangalore studio curated by Priya Bothra. Delivery time is 2–3 days for metro and major locations.',
     },
     {
       q: 'How does the Custom Hamper Builder work?',
@@ -49,7 +69,7 @@ export const ContactPage: React.FC = () => {
     },
     {
       q: 'Do you handle bulk corporate and wedding return favors?',
-      a: 'Yes! Bulk gifting is one of our specialities. We offer customized packaging with company logos or wedding monograms, custom branded ribbons, and tiered volume pricing. Contact us on WhatsApp or request a quote on /bulk-gifting.',
+      a: 'Yes! Bulk gifting is one of our specialities. We offer customized packaging with company logos or wedding monograms, custom branded ribbons, and tiered volume pricing. Contact us on WhatsApp (7899140499) or request a quote on /bulk-gifting.',
     },
     {
       q: 'Can I include a handwritten letter?',
@@ -84,7 +104,7 @@ Message: ${formData.message || 'I would like to enquire about your hampers.'}`;
         </div>
 
         {/* Contact Info Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           {/* Phone */}
           <div className="bg-white p-6 rounded-3xl border border-cream-200 shadow-subtle flex items-start gap-4">
             <div className="w-12 h-12 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center shrink-0">
@@ -98,8 +118,10 @@ Message: ${formData.message || 'I would like to enquire about your hampers.'}`;
               >
                 {siteConfig.phone}
               </a>
-              <span className="text-xs text-stone-500 font-medium">Alt: {siteConfig.secondaryPhone}</span>
-              <p className="text-xs text-stone-400 mt-1">{siteConfig.workingHours}</p>
+              <div className="text-xs text-stone-600 mt-1 space-y-0.5">
+                <p><span className="font-semibold text-charcoal-800">Order time:</span> 10 AM – 9 PM</p>
+                <p><span className="font-semibold text-charcoal-800">Sunday order time:</span> 10 AM – 6 PM</p>
+              </div>
             </div>
           </div>
 
@@ -113,14 +135,14 @@ Message: ${formData.message || 'I would like to enquire about your hampers.'}`;
                 Instant WhatsApp
               </span>
               <a
-                href={getWhatsAppLink('Hi Little Hamper Co.! I would like assistance with a hamper.')}
+                href={getWhatsAppLink('Hi Little Hamper Co.! I would like assistance with an order or hamper.')}
                 target="_blank"
                 rel="noreferrer"
                 className="text-base font-bold text-charcoal-900 hover:text-emerald-600 transition-colors block"
               >
                 {siteConfig.phone}
               </a>
-              <p className="text-xs text-stone-500 mt-1">Quickest responses (Typically &lt; 15 mins)</p>
+              <p className="text-xs text-stone-500 mt-1">Direct consultation &amp; custom quotes</p>
             </div>
           </div>
 
@@ -132,7 +154,93 @@ Message: ${formData.message || 'I would like to enquire about your hampers.'}`;
             <div>
               <span className="text-[10px] uppercase font-bold text-stone-400 block">Bangalore Studio Hub</span>
               <p className="text-sm font-bold text-charcoal-900">{siteConfig.location}</p>
-              <p className="text-xs text-stone-500 mt-1">Curated by Priya Jain &bull; Pan-India Dispatch</p>
+              <p className="text-xs text-stone-500 mt-1">Curated by Priya Bothra &bull; Pan-India Dispatch</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Customer Information & Ordering Policies Grid */}
+        <div className="bg-white rounded-3xl border border-cream-200 shadow-subtle p-6 sm:p-8 mb-16 space-y-5">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-cream-100 gap-2">
+            <div>
+              <span className="text-[10px] uppercase tracking-widest font-bold text-brand-600 block">
+                Customer Care &amp; Service Standards
+              </span>
+              <h2 className="font-serif text-xl sm:text-2xl font-bold text-charcoal-950 mt-0.5">
+                Ordering &amp; Delivery Information
+              </h2>
+            </div>
+            <div className="inline-flex items-center gap-2 text-xs font-semibold text-charcoal-800 bg-cream-100/80 px-3 py-1.5 rounded-full border border-cream-200">
+              <Phone className="w-3.5 h-3.5 text-brand-500" />
+              <span>Helpline: {siteConfig.phone}</span>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {/* 1. Order Time */}
+            <div className="p-4 bg-cream-50/70 rounded-2xl border border-cream-200/80 space-y-1.5">
+              <div className="w-8 h-8 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center">
+                <Clock className="w-4 h-4" />
+              </div>
+              <h3 className="text-xs font-bold text-charcoal-950 uppercase tracking-wide">
+                Order Hours
+              </h3>
+              <div className="text-xs text-stone-600 space-y-0.5">
+                <p><strong className="text-charcoal-900">Mon – Sat:</strong> 10 AM – 9 PM</p>
+                <p><strong className="text-charcoal-900">Sunday:</strong> 10 AM – 6 PM</p>
+              </div>
+              <p className="text-[11px] text-stone-400 pt-1 border-t border-cream-200/50">
+                Contact: {siteConfig.phone}
+              </p>
+            </div>
+
+            {/* 2. Delivery Time & Slot */}
+            <div className="p-4 bg-cream-50/70 rounded-2xl border border-cream-200/80 space-y-1.5">
+              <div className="w-8 h-8 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center">
+                <Truck className="w-4 h-4" />
+              </div>
+              <h3 className="text-xs font-bold text-charcoal-950 uppercase tracking-wide">
+                Delivery Details
+              </h3>
+              <div className="text-xs text-stone-600 space-y-0.5">
+                <p><strong className="text-charcoal-900">Delivery time:</strong> 2–3 days</p>
+                <p><strong className="text-charcoal-900">Delivery time slot:</strong> Available</p>
+              </div>
+              <p className="text-[11px] text-emerald-700 font-semibold pt-1 border-t border-cream-200/50">
+                Morning, Afternoon &amp; Evening slots
+              </p>
+            </div>
+
+            {/* 3. Returns & Replacement */}
+            <div className="p-4 bg-cream-50/70 rounded-2xl border border-cream-200/80 space-y-1.5">
+              <div className="w-8 h-8 rounded-xl bg-rose-100 text-rose-700 flex items-center justify-center">
+                <ShieldCheck className="w-4 h-4" />
+              </div>
+              <h3 className="text-xs font-bold text-charcoal-950 uppercase tracking-wide">
+                Return Policy
+              </h3>
+              <div className="text-xs text-stone-600 space-y-0.5">
+                <p className="font-semibold text-rose-800">No returns; replacement only</p>
+                <p className="text-[11px] text-stone-500">
+                  Defective or transit-damaged items replaced promptly within 24 hours.
+                </p>
+              </div>
+            </div>
+
+            {/* 4. Pre-Order Cancellation */}
+            <div className="p-4 bg-cream-50/70 rounded-2xl border border-cream-200/80 space-y-1.5">
+              <div className="w-8 h-8 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center">
+                <RotateCcw className="w-4 h-4" />
+              </div>
+              <h3 className="text-xs font-bold text-charcoal-950 uppercase tracking-wide">
+                Cancellation &amp; Refund
+              </h3>
+              <div className="text-xs text-stone-600 space-y-0.5">
+                <p className="font-semibold text-emerald-800">Pre-order cancellation:</p>
+                <p className="text-[11px] text-stone-600">
+                  Full refund if cancelled within 24 hours of placing the order.
+                </p>
+              </div>
             </div>
           </div>
         </div>

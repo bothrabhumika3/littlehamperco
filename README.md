@@ -54,7 +54,7 @@ littlehamperco/
 │   └── sitemap.xml             # Complete XML sitemap
 ├── src/
 │   ├── config/
-│   │   └── siteConfig.ts       # Central brand config (Phone: 7828966898, Currency: ₹, URLs)
+│   │   └── siteConfig.ts       # Central brand config (Phone: 7899140499, Currency: ₹, URLs)
 │   ├── types/
 │   │   ├── product.ts          # Product, Food transparency, Category, Occasions
 │   │   ├── customHamper.ts     # 8-step Custom hamper types & packaging
@@ -148,22 +148,23 @@ The central configuration file is located at `src/config/siteConfig.ts`:
 
 ```typescript
 export const siteConfig = {
-  brandName: "Little Hamper Co.",
-  phone: "7828966898",
+  brandName: "The Little Hamper Co.",
+  founder: "Priya Bothra",
+  phone: "7899140499",
   currency: "INR",
   currencySymbol: "₹",
-  whatsapp: "7828966898",
-  instagram: "[ADD INSTAGRAM]",
-  instagramHandle: "@littlehamperco",
-  instagramUrl: "https://instagram.com/littlehamperco",
-  email: "hello@littlehamperco.com", // [ADD EMAIL]
-  location: "Bhopal / Indore, MP, India (Pan-India Shipping)", // [ADD LOCATION]
+  whatsapp: "7899140499",
+  instagram: "the.littlehamperco",
+  instagramHandle: "@the.littlehamperco",
+  instagramUrl: "https://instagram.com/the.littlehamperco",
+  email: "hello@littlehamperco.com",
+  location: "Bangalore, Karnataka, India (Pan-India Shipping)",
   freeDeliveryThreshold: 1999,
   defaultDeliveryFee: 150,
-  tagline: "Little Hampers. Big Moments.",
-  subtagline: "Beautifully curated hampers, packed with love for every celebration, milestone and little moment.",
-  announcementText: "Thoughtfully packed. Beautifully gifted. Made for every occasion.",
-  workingHours: "Mon - Sun: 9:00 AM - 9:00 PM",
+  tagline: "Thoughtful Gifting",
+  subtagline: "Customized Gift Hampers, Corporate Gifting, Food Platters, Bouquets & Wedding Packing ~ By Priya Bothra",
+  announcementText: "Thoughtfully packed. Delivery: 2–3 days | Time slots available | Contact: 7899140499",
+  workingHours: "Mon - Sat: 10:00 AM – 9:00 PM | Sun: 10:00 AM – 6:00 PM",
   sameDayDeliveryCutoff: "2:00 PM",
 };
 ```
@@ -210,6 +211,9 @@ To migrate from LocalStorage persistence to Supabase:
 ---
 
 ## 📞 Support & Contacts
-- **Brand:** Little Hamper Co.
-- **Phone / WhatsApp:** 7828966898
-- **Hours:** Monday to Sunday, 9:00 AM – 9:00 PM
+- **Brand:** The Little Hamper Co.
+- **Founder:** Priya Bothra
+- **Phone / WhatsApp:** 7899140499
+- **Order Hours:** Monday to Saturday: 10:00 AM – 9:00 PM | Sunday: 10:00 AM – 6:00 PM
+- **Delivery Time:** 2–3 Days (Time Slots Available)
+- **Policies:** No returns; replacement only | Pre-order cancellation: Full refund within 24 hours

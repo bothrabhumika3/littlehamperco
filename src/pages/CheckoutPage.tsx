@@ -246,10 +246,32 @@ export const CheckoutPage: React.FC = () => {
 
             {/* Section 2: Preferred Delivery Date & Slot */}
             <div className="bg-white p-6 sm:p-8 rounded-3xl border border-cream-200 shadow-subtle space-y-4">
-              <h2 className="font-serif text-xl font-bold text-charcoal-900 border-b border-cream-200 pb-3 flex items-center gap-2">
-                <Calendar className="w-5 h-5 text-brand-500" />
-                <span>2. Schedule Delivery</span>
-              </h2>
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-cream-200 pb-3 gap-2">
+                <h2 className="font-serif text-xl font-bold text-charcoal-900 flex items-center gap-2">
+                  <Calendar className="w-5 h-5 text-brand-500" />
+                  <span>2. Schedule Delivery</span>
+                </h2>
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className="text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200 flex items-center gap-1">
+                    <CheckCircle2 className="w-3 h-3 text-emerald-600" />
+                    Delivery time slot: Available
+                  </span>
+                  <span className="text-[11px] font-bold text-brand-700 bg-brand-50 px-2.5 py-0.5 rounded-full border border-brand-200">
+                    Delivery time: 2–3 days
+                  </span>
+                </div>
+              </div>
+
+              {/* Order Processing Hours Banner */}
+              <div className="p-3 bg-cream-50 rounded-2xl border border-cream-200/80 text-xs text-stone-600 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                <div className="flex items-center gap-2">
+                  <Clock className="w-4 h-4 text-brand-500 shrink-0" />
+                  <span>
+                    <strong>Order time:</strong> 10 AM – 9 PM &bull; <strong>Sunday:</strong> 10 AM – 6 PM
+                  </span>
+                </div>
+                <span className="text-[11px] text-stone-500 font-medium">Helpline: {siteConfig.phone}</span>
+              </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
@@ -503,6 +525,20 @@ export const CheckoutPage: React.FC = () => {
                 <span className="text-xl text-brand-600 font-bold">
                   {formatCurrency(totals.totalAmount)}
                 </span>
+              </div>
+            </div>
+
+            {/* Customer Policies & Ordering Terms */}
+            <div className="p-3.5 bg-cream-50/90 rounded-2xl border border-cream-200 space-y-2 text-[11px] text-stone-600">
+              <p className="flex items-center gap-1.5 font-bold text-charcoal-900">
+                <ShieldCheck className="w-4 h-4 text-brand-500 shrink-0" />
+                <span>Customer Policies &amp; Ordering Terms</span>
+              </p>
+              <div className="space-y-1 text-stone-600 pl-5">
+                <p>&bull; <strong>No returns; replacement only</strong></p>
+                <p>&bull; <strong>Pre-order cancellation:</strong> Full refund if cancelled within 24 hours</p>
+                <p>&bull; <strong>Delivery time:</strong> 2–3 days &bull; Time slots available</p>
+                <p>&bull; <strong>Contact / Helpline:</strong> {siteConfig.phone}</p>
               </div>
             </div>
 

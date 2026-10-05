@@ -245,13 +245,25 @@ export const CartDrawer: React.FC = () => {
 
             {/* Action Buttons */}
             <div className="space-y-2 pt-1">
+              {/* Quick Policies */}
+              <div className="text-[11px] text-stone-500 bg-cream-50 p-2.5 rounded-xl border border-cream-200/70 space-y-1">
+                <div className="flex justify-between items-center">
+                  <span><strong>Delivery time:</strong> 2–3 days</span>
+                  <span className="text-emerald-700 font-semibold text-[10px] bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+                    Slots available
+                  </span>
+                </div>
+                <p>🛡️ <strong>Policy:</strong> No returns; replacement only</p>
+                <p>🔄 <strong>Pre-order cancel:</strong> Full refund if cancelled within 24h</p>
+              </div>
+
               <a
                 href={siteConfig.whatsapp ? `https://wa.me/91${siteConfig.whatsapp}?text=${encodeURIComponent('Hi Little Hamper Co.! I would like to consult about the custom hampers in my basket.')}` : '#'}
                 target="_blank"
                 rel="noreferrer"
                 className="w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 shadow-card transition-all active:scale-[0.99]"
               >
-                <span>Consult on WhatsApp</span>
+                <span>Consult on WhatsApp ({siteConfig.phone})</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
 

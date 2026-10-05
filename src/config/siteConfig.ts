@@ -18,17 +18,23 @@ export interface SiteConfig {
   subtagline: string;
   announcementText: string;
   workingHours: string;
+  orderHoursWeekday: string;
+  orderHoursSunday: string;
+  deliveryTime: string;
+  returnPolicy: string;
+  cancellationPolicy: string;
+  deliverySlotAvailable: boolean;
   sameDayDeliveryCutoff: string;
 }
 
 export const siteConfig: SiteConfig = {
   brandName: "The Little Hamper Co.",
-  founder: "Priya Jain",
-  phone: "7828966898",
+  founder: "Priya Bothra",
+  phone: "7899140499",
   secondaryPhone: "7899140499",
   currency: "INR",
   currencySymbol: "₹",
-  whatsapp: "7828966898",
+  whatsapp: "7899140499",
   instagram: "the.littlehamperco",
   instagramHandle: "@the.littlehamperco",
   instagramUrl: "https://instagram.com/the.littlehamperco",
@@ -38,9 +44,15 @@ export const siteConfig: SiteConfig = {
   freeDeliveryThreshold: 1999,
   defaultDeliveryFee: 150,
   tagline: "Thoughtful Gifting",
-  subtagline: "Customized Gift Hampers, Corporate Gifting, Food Platters, Bouquets & Wedding Packing ~ By Priya Jain",
-  announcementText: "Thoughtfully packed. Beautifully gifted. Bangalore & Pan-India Express Delivery.",
-  workingHours: "Mon - Sun: 9:00 AM - 9:00 PM",
+  subtagline: "Customized Gift Hampers, Corporate Gifting, Food Platters, Bouquets & Wedding Packing ~ By Priya Bothra",
+  announcementText: "Thoughtfully packed. Delivery: 2–3 days | Time slots available | Contact: 7899140499",
+  workingHours: "Mon - Sat: 10:00 AM – 9:00 PM | Sun: 10:00 AM – 6:00 PM",
+  orderHoursWeekday: "10:00 AM – 9:00 PM",
+  orderHoursSunday: "10:00 AM – 6:00 PM",
+  deliveryTime: "2–3 days",
+  returnPolicy: "No returns; replacement only",
+  cancellationPolicy: "Pre-order cancellation: Full refund if cancelled within 24 hours",
+  deliverySlotAvailable: true,
   sameDayDeliveryCutoff: "2:00 PM",
 };
 
